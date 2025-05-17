@@ -4,8 +4,10 @@ import AboutMe from './component/AboutMe'
 import Aproach from './component/Aproach'
 import Experience from './component/Experience'
 import HeroSection from './component/HeroSection'
+import LetsWorkTogether from './component/LetsWorkTogether'
 import Project from './component/Project'
 import Stats from './component/Stats'
+import ToolStack from './component/ToolStack'
 import VoiceOfSanjay from './component/VoiceOfSanjay'
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
       <VoiceOfSanjay/>
       <Stats/>
       <Experience/>
+      <ToolStack/>
+      <LetsWorkTogether/>
       </div>
     </>
   )

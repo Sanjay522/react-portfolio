@@ -1,7 +1,6 @@
 import React from 'react'
 import InfiniteScroll from './AnimatedText'
 import profilepic from "../assets/images/20241125_015003.jpg"
-import { div } from 'framer-motion/client';
 
 type Aproach={
     image:string;

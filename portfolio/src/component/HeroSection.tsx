@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
                     top: '0',
                     left: '20%',
                     right: '0',
-                    height: '1200%',
+                    height: '1500%',
                     width: "0.5px",
                     //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
                     backgroundColor: '#B2BEB5',
@@ -62,7 +62,7 @@ const HeroSection: React.FC = () => {
                     top: '0',
                     left: '50%',
                     right: '0',
-                    height: '1200%',
+                    height: '1500%',
                     width: "1px",
                     //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
                     backgroundColor: '#B2BEB5',
@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
                     top: '0',
                     left: '80%',
                     right: '0',
-                    height: '1200%',
+                    height: '1500%',
                     width: "1px",
                     //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
                     backgroundColor: '#B2BEB5',
