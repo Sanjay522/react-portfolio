@@ -7,46 +7,46 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
     {
-      title: 'Cricket Score',
-      description: 'Project',
-      image: example,
-      progressIndex: 0,
-      height: '70vh',
-      width: '45vw',
+        title: 'Cricket Score',
+        description: 'Project',
+        image: example,
+        progressIndex: 0,
+        height: '70vh',
+        width: '45vw',
     },
     {
-      title: 'Text Extractor',
-      description: 'Project',
-      image: example,
-      progressIndex: 1,
-      height: '48vh',
-      width: '30vw',
+        title: 'Text Extractor',
+        description: 'Project',
+        image: example,
+        progressIndex: 1,
+        height: '48vh',
+        width: '30vw',
     },
     {
-      title: 'Text Extractor',
-      description: 'Project',
-      image: example,
-      progressIndex: 2,
-      height: '60vh',
-      width: '50vw',
+        title: 'Text Extractor',
+        description: 'Project',
+        image: example,
+        progressIndex: 2,
+        height: '60vh',
+        width: '50vw',
     },
     {
-      title: 'Text Extractor',
-      description: 'Project',
-      image: example,
-      progressIndex: 3,
-      height: '50vh',
-      width: '30vw',
+        title: 'Text Extractor',
+        description: 'Project',
+        image: example,
+        progressIndex: 3,
+        height: '50vh',
+        width: '30vw',
     },
     {
-      title: 'Cricket Score',
-      description: 'Project',
-      image: example,
-      progressIndex: 4,
-      height: '70vh',
-      width: '45vw',
+        title: 'Cricket Score',
+        description: 'Project',
+        image: example,
+        progressIndex: 4,
+        height: '70vh',
+        width: '45vw',
     },
-  ];
+];
 
 const Project: React.FC = () => {
     return (
@@ -62,47 +62,65 @@ const Project: React.FC = () => {
                     backgroundColor: '#B2BEB5',
                 }}
             ></div>
-            <div className=' relative flex justify-between mt-35 '>
-                <p>02</p>
-                <p>//PROJECT</p>
+            <div className=' relative flex justify-between sm:mt-35 '>
+                <p className='hidden sm:block'>02</p>
+                <p >//PROJECT</p>
                 <p>2004</p>
             </div>
 
-            <div className=' relative flex justify-between my-15 items-end'>
+            <div className=' relative flex flex-col sm:flex sm:flex-row justify-between my-15 sm:items-end'>
                 <div style={{
 
                 }}>
-                    <h1 className='text-9xl'>LATEST</h1>
-                    <h1 className='text-9xl'>PROJECT</h1>
+                    <h1 className='sm:text-9xl text-3xl'>LATEST</h1>
+                    <h1 className='sm:text-9xl text-3xl'>PROJECT</h1>
 
                 </div>
-                <div>
+                <div className='text-[15px] sm:text-[25px] sm:my-0 my-1'>
                     <p>My creative spirit comes alive in</p>
                     <p>the digital realm.With nimble</p>
                     <p>fingers flying across the device.</p>
                 </div>
-            
+
             </div>
-            <div className='space-y-20'> 
+            <div className='sm:block hidden space-y-20'>
                 <div className='flex justify-between items-end'>
                     {
-                        projects.slice(0,2).map((p,i)=>(
-                            <ProjectCard key={i} {...p}/>
+                        projects.slice(0, 2).map((p, i) => (
+                            <ProjectCard key={i} {...p} />
                         ))
                     }
                 </div>
-<div className='flex justify-center'>
-    {projects.slice(2,3).map((p,i)=>(
-        <ProjectCard key={i} {...p}/>
-    ))}
-</div>
+                <div className='flex justify-center'>
+                    {projects.slice(2, 3).map((p, i) => (
+                        <ProjectCard key={i} {...p} />
+                    ))}
+                </div>
 
-<div className='flex justify-between py-20 items-end'>
-    {projects.slice(3,5).map((p,i)=>(
-        <ProjectCard key={i} {...p}/>
-    ))}
-</div>
+                <div className='flex justify-between py-20 items-end'>
+                    {projects.slice(3, 5).map((p, i) => (
+                        <ProjectCard key={i} {...p} />
+                    ))}
+                </div>
             </div>
+
+
+            <div className='sm:hidden block '>
+                <div className='flex flex-col justify-between items-end'>
+                    {
+                        projects.map((item, index) => (
+                            <ProjectCard key={index} image={item.image} title={item.title}
+                                description={item.description}
+                                progressIndex={item.progressIndex}
+                                height={'30vh'}
+                                width={"w-full"} />
+                        ))
+                    }
+                </div>
+
+            </div>
+
+
 
 
             {/* <div className=''>

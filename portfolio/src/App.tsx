@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-    <div className='px-12'>
+    <div className='sm:px-12 px-8'>
       <HeroSection/>
       <Aproach/>
       <Project/>
@@ -24,6 +24,7 @@ function App() {
       <VoiceOfSanjay/>
       <Stats/>
       <Experience/>
+      {/* add some animationn here  */}
       <ToolStack/>
       <LetsWorkTogether/>
       <Footer/>

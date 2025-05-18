@@ -17,16 +17,16 @@ const AboutMe: React.FC = () => {
             ></div>
 
             <div className=' relative flex justify-between  '>
-                <p>02</p>
+                <p className='hidden sm:block'>03</p>
                 <p>//WHO AM I</p>
                 <p>SINCE 2024</p>
             </div>
-            <div className='flex justify-center flex-col items-center my-20 space-y-2'>
-                <h1 className='text-7xl'>MORE ABOUT</h1>
-                <h1 className='text-8xl'>SANJAY</h1>
+            <div className='flex justify-center flex-col items-center sm:my-20 my-10 space-y-2'>
+                <h1 className='sm:text-7xl text-4xl'>MORE ABOUT</h1>
+                <h1 className='sm:text-8xl text-4xl'>SANJAY</h1>
             </div>
             <div className='relative flex justify-center'>
-                <img src={pic} className='h-[100vh] w-[30vw] object-cover rounded-lg ' alt="" />
+                <img src={pic} className='sm:h-[100vh] sm:w-[30vw] object-cover rounded-lg ' alt="" />
             </div>
             <div className=' relative flex flex-col justify-center items-center mb-20'>
                 <div className='text-2xl text-center py-10'>

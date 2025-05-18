@@ -23,7 +23,7 @@ const InfiniteScroll:React.FC = () => {
         {[...logos, ...logos].map((logo, i) => (
           <div
             key={i}
-            className="min-w-[200px] h-[150px] border border-gray-600 bg-white  text-2xl font-semibold flex items-center justify-center rounded-lg shadow-lg"
+            className="h-[70px] min-w-[120px] sm:min-w-[200px] sm:h-[150px] border border-gray-600 bg-white  sm:text-2xl sm:font-semibold flex items-center justify-center rounded-lg shadow-lg"
           >
             {logo}
             

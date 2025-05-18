@@ -16,11 +16,11 @@ const VoiceOfSanjay: React.FC = () => {
             ></div>
             <div className='relative'>
                 <div className=' relative flex justify-between  '>
-                    <p>04</p>
+                    <p className='hidden sm:block'>04</p>
                     <p>//VOICE OF SANJAY</p>
                     <p>SINCE 2024</p>
                 </div>
-                <div className='text-5xl text-center my-[35vh]'>
+                <div className='sm:text-5xl text-2xl text-center my-[35vh]'>
                     <p>A Los Angeles-based independent frontend developer,</p>
                     <p>specializing in helping businesses and individuals turn their ideas into </p>
                     <p>seamless,high-impact digital experiences through modern web technologies.</p>

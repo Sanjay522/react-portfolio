@@ -32,34 +32,34 @@ const ToolStack: React.FC = () => {
                     backgroundColor: '#B2BEB5',
                 }}
             ></div>
-            <div className='relative'>
+            <div className='relative '>
                 <div className=' relative flex justify-between py-8 '>
-                    <p>08</p>
+                    <p className='sm:block hidden'>08</p>
                     <p>//TOOL STACK</p>
                     <p>2024-PRESENT</p>
                 </div>
 
-<div className='mt-20 mb-30'>
+                <div className='sm:mt-20 sm:mb-30'>
 
-                    <p className='text-3xl'>TOOL STACK</p>
+                    <p className='text-3xl sm:my-0 mb-10'>TOOL STACK</p>
 
                     <div className=' flex flex-col justify-end items-end '>
 
                         {tool.map((item, index) => (
-                            <div className={` bg-checkered grid grid-cols-2  grid-rows-3 py-3  items-end  justify-end border-t border-gray-600 w-[60vw] ${index == tool.length - 1 ? "border-y " : ""} `} key={index} >
+                            <div className={` bg-checkered grid grid-cols-2  sm:grid-rows-3 py-3  items-end  justify-end border-t border-gray-600 sm:w-[60vw] ${index == tool.length - 1 ? "border-y " : ""} `} key={index} >
                                 <p className='text-2xl py-1'>{item.language}</p>
-                                <p className='col-start-1 row-start-2'>{item.languagetitle}</p>
-                                <p className='col-start-2 row-start-2 text-end' >{item.efficiency}</p>
-                                <p className='text-gray-600 col-start-1 row-start-3 pr-2'>{item.languagedescription}</p>
+                                <p className='col-start-1 row-start-2 sm:text-[18px] text-[14px]'>{item.languagetitle}</p>
+                                <p className='col-start-2 row-start-2 text-end sm:text-[18px] text-[14px]' >{item.efficiency}</p>
+                                <p className='text-gray-600 col-start-1 row-start-3 pr-2 sm:text-[18px] text-[14px]'>{item.languagedescription}</p>
                             </div>
                         ))}
 
                     </div>
-                    </div>
                 </div>
-
             </div>
-            )
+
+        </div>
+    )
 }
 
-            export default ToolStack
+export default ToolStack

@@ -21,6 +21,10 @@ const Stats: React.FC = () => {
     {
         number: "4+",
         name: "YEARS OF EXPERIENCE"
+    },
+     {
+        number: "4+",
+        name: "YEARS OF EXPERIENCE"
     }
 ];
     return (
@@ -38,15 +42,15 @@ const Stats: React.FC = () => {
             ></div>
             <div>
                 <div className=' relative flex justify-between  '>
-                    <p>05</p>
+                    <p className='hidden sm:block'>05</p>
                     <p>//STATS</p>
                     <p>FUN FACT</p>
                 </div>
-                <div className= ' relative bg-checkered grid grid-cols-3 w-full place-items-center border-[#B2BEB5] border-y my-20  '>
+                <div className= ' relative bg-checkered grid grid-cols-2 gap-5 sm:grid-cols-4 w-full place-items-center border-[#B2BEB5] border-y my-20  '>
                     {stats.map((item,index)=>(
                         <div key={index} className='relative p-5'> 
-                        <p className='text-9xl'>{item.number}</p>
-                        <p className='text-gray-600'>{item.name}</p>
+                        <p className='sm:text-9xl text-7xl'>{item.number}</p>
+                        <p className='text-gray-600 text-[12px] sm:text[16px]'>{item.name}</p>
                         </div>
                     ))}
                 </div>
