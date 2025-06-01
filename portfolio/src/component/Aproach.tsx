@@ -1,6 +1,8 @@
 import React from 'react'
 import InfiniteScroll from './AnimatedText'
 import profilepic from "../assets/images/20241125_015003.jpg"
+import { easeInOut, motion } from "framer-motion";
+
 
 type Aproach = {
     image: string;
@@ -10,6 +12,8 @@ type Aproach = {
 }
 
 const Aproach: React.FC = () => {
+
+    
     const aproach: Aproach[] = [
         {
             image: profilepic,
@@ -33,6 +37,8 @@ const Aproach: React.FC = () => {
 
         }
     ]
+
+    const text = "I'M SANJAY GUPTA BASED IN MAHARASHTRA, INDIA."
     return (
         <>
             <div
@@ -76,14 +82,28 @@ const Aproach: React.FC = () => {
                     <p>THREE PHASES</p>
                 </div>
                 <div className='flex flex-col justify-center items-center sm:mt-24 mt-16'>
-                    <h1 className='sm:text-8xl text-2xl text-center sm:tracking-[3px]' >I'M SANJAY GUPTA BASED IN MAHARASHTRA, INDIA.</h1>
+                    <div className='flex flex-wrap justify-center'>
+                   {text.split(" ").map((word, index) => (
+  <motion.span
+    key={index}
+    initial={{ y: -100, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }} // ✅ triggers only when in viewport
+    transition={{ delay: index * 0.15, ease: easeInOut }}
+    viewport={{ once: true, amount: 0.6 }} // adjust amount if needed
+    className='sm:text-8xl text-2xl text-center sm:tracking-[3px] mx-1'
+  >
+    {word}
+  </motion.span>
+))}
+
+                    </div>
                     <p className='text-gray-600 mt-5 sm:text-[30px] text-[12px]'>I create responsive website and maintain</p>
                     <p className='text-gray-600 sm:text-[30px] text-[12px]'> consistency across all devices</p>
 
-<div className='relative bg-checkered grid grid-rows-3 sm:grid-cols-3 sm:grid-rows-1 w-full items-center sm:my- my-10 border border-[#B2BEB5] h-[60vh] sm:h-[40vh]'>
+                    <div className='relative bg-checkered grid grid-rows-3 sm:grid-cols-3 sm:grid-rows-1 w-full items-center sm:my- my-10 border border-[#B2BEB5] h-[60vh] sm:h-[40vh]'>
 
                         {aproach.map((item, index) => (
-<div key={index} className={`flex flex-col justify-center items-center text-center ${index !== 0 ? " border-l border-[#B2BEB5]" : ""} h-full`}>
+                            <div key={index} className={`flex flex-col justify-center items-center text-center ${index !== 0 ? " border-l border-[#B2BEB5]" : ""} h-full`}>
                                 <img src={item.image} className='sm:w-15 sm:h-15 w-10 h-10 rounded-lg' alt="" />
                                 <p className='sm:text-3xl text-2xl py-2'>{item.para1}</p>
                                 <p className='text-gray-600 sm:text-[15px] text-[10px]'>{item.para2}</p>

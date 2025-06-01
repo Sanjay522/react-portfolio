@@ -5,32 +5,34 @@ import location from "../assets/images/location.svg"
 import world from "../assets/images/world.svg"
 import verified from "../assets/images/verified.svg"
 import Profile from './Profile'
+import { easeInOut, motion } from "framer-motion";
+
 
 
 type Detail = {
-    image:string;
-    data1:string;
-    data2?:string;
+    image: string;
+    data1: string;
+    data2?: string;
 }
 
 const HeroSection: React.FC = () => {
 
-    const detail:Detail[] = [{
-        image:location,
-        data1:"BASED IN MAHARASHTRA",
-        data2:"INDIA"
+    const detail: Detail[] = [{
+        image: location,
+        data1: "BASED IN MAHARASHTRA",
+        data2: "INDIA"
     },
     {
-        image:world,
-        data1:"AVAILABLE ALL OVER THE WORLD",
-        data2:"WOLDWIDE"
+        image: world,
+        data1: "AVAILABLE ALL OVER THE WORLD",
+        data2: "WOLDWIDE"
     },
     {
-        image:verified,
-        data1:"FRONT-END WEB DEVELOPER",
-        data2:""
+        image: verified,
+        data1: "FRONT-END WEB DEVELOPER",
+        data2: ""
     },
-]
+    ]
     return (
         <div>
             <div className=''
@@ -104,38 +106,45 @@ const HeroSection: React.FC = () => {
                     backgroundColor: '#B2BEB5',
                 }}
             ></div>
-            
+
 
 
             <Navbar />
             <div className="relative  flex items-center justify-center">
-                 <h1 className='  leading-[1.25] tracking-[15px] text-[25vw] sm:tracking-[30px]   sm:leading-[1.15]'
-                >SANJAY</h1>
 
-                {/* <h1 className="  "
-                 style={{
-                    fontSize: '25vw',
-                    lineHeight: '1.15',
-                    letterSpacing: '30px',
-                    fontStretch: 'expanded'
-                }} >SANJAY</h1> */}
-                
+                <motion.h1
+                    initial={{ y: -200, opacity: 0, zIndex: -20 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className='  leading-[1.25] tracking-[15px] text-[25vw] sm:tracking-[30px]   sm:leading-[1.15]'
+                >
+                    SANJAY  </motion.h1>
+
+
+
+
             </div>
-           
 
 
-           
+
+
+<motion.div 
+initial={{y:50,opacity:0}}
+animate={{y:0,opacity:1}}
+transition={{duration:0.6,ease:easeInOut}}
+>
             <div className=" relative flex flex-col sm:flex sm:flex-row justify-between sm:items-center h-[15vh] px-10">
-        {detail.map((item, idx) => (
-          <div key={idx} className="text-center space-y-1 flex flex-col justify-center items-center sm:py-0 py-7">
-            {item.image && <img className='h-6 w-6' src={item.image} alt={`icon-${idx}`} />}
-            <p>{item.data1}</p>
-            {item.data2 && <p>{item.data2}</p>}
-          </div>
-        ))}
-      </div>
+                {detail.map((item, idx) => (
+                    <div key={idx} className="text-center space-y-1 flex flex-col justify-center items-center sm:py-0 py-7">
+                        {item.image && <img className='h-6 w-6' src={item.image} alt={`icon-${idx}`} />}
+                        <p>{item.data1}</p>
+                        {item.data2 && <p>{item.data2}</p>}
+                    </div>
+                ))}
+            </div>
+            </motion.div>
 
-            <Profile/>
+            <Profile />
 
         </div>
     )

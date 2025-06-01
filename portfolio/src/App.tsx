@@ -2,10 +2,14 @@
 import './App.css'
 import AboutMe from './component/AboutMe'
 import Aproach from './component/Aproach'
+import ImageUploader from './component/Example'
+import ProductForm from './component/Example'
 import Experience from './component/Experience'
 import Footer from './component/Footer'
 import HeroSection from './component/HeroSection'
 import LetsWorkTogether from './component/LetsWorkTogether'
+import ImageSelectorGallery from './component/Product'
+import ProductPage from './component/Product'
 import Project from './component/Project'
 import Stats from './component/Stats'
 import ToolStack from './component/ToolStack'
@@ -24,10 +28,10 @@ function App() {
       <VoiceOfSanjay/>
       <Stats/>
       <Experience/>
-      {/* add some animationn here  */}
       <ToolStack/>
       <LetsWorkTogether/>
       <Footer/>
+    
       </div>
     </>
   )

@@ -33,7 +33,7 @@ const ToolStack: React.FC = () => {
                 }}
             ></div>
             <div className='relative '>
-                <div className=' relative flex justify-between py-8 '>
+                <div className=' relative flex justify-between  '>
                     <p className='sm:block hidden'>08</p>
                     <p>//TOOL STACK</p>
                     <p>2024-PRESENT</p>

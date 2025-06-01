@@ -1,6 +1,8 @@
 import React from 'react'
 import example from "../assets/images/20241125_015003.jpg"
 import ProjectCard from './ProjectCard';
+import { easeInOut, motion } from "framer-motion";
+
 
 
 
@@ -72,8 +74,26 @@ const Project: React.FC = () => {
                 <div style={{
 
                 }}>
-                    <h1 className='sm:text-9xl text-3xl'>LATEST</h1>
-                    <h1 className='sm:text-9xl text-3xl'>PROJECT</h1>
+                    <motion.div
+    initial={{ y: -100, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }} // ✅ triggers only when in viewport
+    transition={{ delay: 0.15, ease: easeInOut }}
+    viewport={{ once: true, amount: 0.6 }} // adjust amount if needed
+    className='sm:text-8xl text-2xl text-center sm:tracking-[3px] mx-1'
+  >
+     <h1 className='sm:text-9xl text-3xl'>LATEST</h1>
+  </motion.div>
+   <motion.div
+    initial={{ y: -100, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }} // ✅ triggers only when in viewport
+    transition={{ delay: 0.5, ease: easeInOut }}
+    viewport={{ once: true, amount: 0.6 }} // adjust amount if needed
+    className='sm:text-8xl text-2xl text-center sm:tracking-[3px] mx-1'
+  >
+                      <h1 className='sm:text-9xl text-3xl'>PROJECT</h1>
+  </motion.div>
+
+                   
 
                 </div>
                 <div className='text-[15px] sm:text-[25px] sm:my-0 my-1'>
