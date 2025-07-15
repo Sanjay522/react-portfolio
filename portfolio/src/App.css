@@ -1,4 +1,10 @@
 @import "tailwindcss";
+*{
+  cursor: none;
+}
+/* @font-face {
+  font-family: 'MyFont';
+  src: url('portfolio/src/public/fonts/NCS Radhiumz Bold.ttf') format('truetype'); /* The path starts from 'public' */
 
 
 body {

@@ -1,8 +1,7 @@
-'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const logos = ['Manila.', 'Basel', 'Theo', 'Oslo.', 'Cairo']
+const logos = ['HTML', 'CSS', 'JAVA SCRIPT', 'REACT', 'REDUX','FRAMER','GIT',]
 
 const InfiniteScroll:React.FC = () => {
   return (<>

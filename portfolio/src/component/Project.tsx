@@ -53,7 +53,8 @@ const projects = [
 const Project: React.FC = () => {
     return (
         <div className=''>
-            <div
+            
+            {/* <div
                 style={{
                     position: 'absolute',
                     top: '360.5%',
@@ -102,7 +103,7 @@ const Project: React.FC = () => {
                     <p>fingers flying across the device.</p>
                 </div>
 
-            </div>
+            </div> */}
             <div className='sm:block hidden space-y-20'>
                 <div className='flex justify-between items-end'>
                     {
