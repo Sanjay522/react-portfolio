@@ -1,5 +1,6 @@
 import React from 'react'
 import BottomData from './BottomData'
+import Navbar from './Navbar'
 
 
 type Data = string
@@ -7,14 +8,19 @@ type Data = string
 const Menu = () => {
     const data:Data[] = ["HOME","ABOUT","CONTACT","PROJECT"]
   return (
-    <>
-    <div className='h-[80svh] w-[100%] flex flex-col  items-center'>
-        {data.map((item)=>(
-            <p className='text-[8rem] leading-none tracking-wide  hover:text-gray-800'>{item}</p>
-        ))}
-    </div>
-    <BottomData/>
-    </>
+   <>
+  <div className="w-[90vw] mx-auto">
+    <Navbar />
+  </div>
+  <div className="h-[80svh] w-[90vw] mx-auto flex flex-col items-center">
+    {data.map((item) => (
+      <p className="text-[8rem] font-bold leading-none tracking-wide hover:text-gray-800">
+        {item}
+      </p>
+    ))}
+  </div>
+  <BottomData />
+</>
   )
 }
 

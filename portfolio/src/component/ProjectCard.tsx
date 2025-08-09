@@ -1,3 +1,5 @@
+import {  motion } from "framer-motion";
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -29,16 +31,46 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {[...Array(5)].map((_, i) => (
             <span
               key={i}
-              className={`h-1.5 w-1.5 sm:h-3 sm:w-3 rounded-full ${i <= progressIndex ? "bg-black" : "bg-gray-400"
+              className={`h-1.5 w-1.5 sm:h-3 sm:w-3 rounded-full ${i <= progressIndex ? "bg-white" : "bg-[#232023]"
                 }`}
             ></span>
           ))}
         </div>
         <div>
-          <h1 className="sm:text-2xl text-[15px]">{title}</h1>
+          <h1 className="sm:text-2xl text-[15px] font-semibold tracking-tight">{title}</h1>
           <p className="text-gray-500 sm:text-[15px] text-[10px]">{description}</p>
         </div>
-        <p className="sm:text-2xl text-[15px]">➜</p>
+        {/* <motion.p
+className="sm:text-2xl text-[15px]"      whileHover={{
+        x: 10, // moves 10px to the right
+        transition: { duration: 0.3, ease: "easeInOut" },
+      }}
+    >
+➜    </motion.p> */}
+
+
+ <motion.p
+      className="relative inline-block text-white text-xl"
+      whileHover="hover"
+      initial="rest"
+      animate="rest"
+      variants={{
+        rest: { color: "#fff" },
+        hover: { color: "#60a5fa" }, // Tailwind blue-400
+      }}
+    >
+      <motion.span
+        className="absolute bottom-0 left-0 h-[2px] bg-blue-400 w-full"
+        initial={{ scaleX: 0 }}
+        variants={{
+          rest: { scaleX: 0 },
+          hover: { scaleX: 1 },
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        style={{ originX: 0 }}
+      />
+➜    </motion.p>
+        {/* <Motion.p className="sm:text-2xl text-[15px]">➜</p> */}
       </div>
     </div>
 

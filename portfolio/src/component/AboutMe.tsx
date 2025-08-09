@@ -3,41 +3,34 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import pic from "../assets/images/20250311_073546.jpg";
 
 const AboutMe: React.FC = () => {
-  //   const targetRef = useRef<HTMLDivElement>(null);
-
-  //   const { scrollYProgress } = useScroll({
-  //     target: targetRef,
-  //     offset: ["start end", "end start"], // begins when section hits bottom, ends when leaving top
-  //   });
-
-  //   const scale = useTransform(scrollYProgress, [0, 1], [1, 2]);
-  //   const y = useTransform(scrollYProgress, [0, 1], [0, 50]);
-
   const ref = useRef<HTMLDivElement>(null);
 
+  // Scroll tracking
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"], // starts sticking when section hits top, stops when ends
+    offset: ["start end", "end start"],
   });
 
-  // zoom from 1 to 1.2
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.2]);
-  // move up 0 to -100px
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, -100]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
-    <div className="relative min-h-[200vh]">
-      {/* Decorative Line */}
-      <div
-        style={{
-          position: "absolute",
-          top: "660%",
-          left: "0",
-          right: "0",
-          height: "1.5px",
-          backgroundColor: "#B2BEB5",
-        }}
-      />
+    <>
+    <div
+                    style={{
+                        position: 'absolute',
+                        top: '662.5%',
+                        left: '0',
+                        right: '0',
+                        height: '1px',
+                        width:"96%",
+                        margin:"auto",
+                        //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
+                        backgroundColor: '#232023',
+                    }}
+                ></div>
+    <div className="relative z-10">
+       
 
       {/* Header Section */}
       <div className="relative flex justify-between px-4 py-8">
@@ -46,8 +39,8 @@ const AboutMe: React.FC = () => {
         <p>SINCE 2024</p>
       </div>
 
-      {/* Title Text */}
-      <div className="sticky flex flex-col justify-center items-center sm:my-20 my-10 space-y-2">
+      {/* Title Section */}
+      <div className="flex flex-col justify-center items-center sm:my-20 my-10 space-y-2">
         <motion.h1
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -68,31 +61,21 @@ const AboutMe: React.FC = () => {
         </motion.h1>
       </div>
 
-      {/* Sticky Zooming Image */}
-      <div ref={ref} className="sticky min-w-[40vw] top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
-                <motion.img
-                    src={pic}
-                    alt="Zooming About Me"
-                    style={{ scale, y }}
-                    className="w-96 h-96 object-cover rounded-xl shadow-xl"
-                />
-                            </div>
-      {/* <div ref={ref} className="relative h-[200vh] bg-gray-50">
-        <div className="sticky top-0 h-screen flex items-center justify-center">
-          <motion.img
+      {/* Scroll Zoom Section */}
+      <div ref={ref} className="relative h-[120vh] overflow-hidden">
+        <motion.div
+          style={{ scale, y }}
+          className="h-screen flex justify-center items-center"
+        >
+          <img
             src={pic}
-            alt="Zooming Image"
-            style={{ scale, y }}
+            alt="About Me"
             className="w-96 h-96 object-cover rounded-xl shadow-xl"
           />
-        </div>
+        </motion.div>
+      </div>
 
-        <div className="h-[100vh] flex items-center justify-center">
-          <p className="text-2xl">I'm now back to normal flow!</p>
-        </div>
-      </div> */}
-
-      {/* Description Section */}
+      {/* Text Section */}
       <div className="flex flex-col justify-center items-center mb-20 px-4">
         <div className="text-2xl text-center py-10">
           <p>
@@ -116,6 +99,8 @@ const AboutMe: React.FC = () => {
         </button>
       </div>
     </div>
+        </>
+
   );
 };
 

@@ -8,18 +8,20 @@ const ProjectHead = () => {
     <div
                     style={{
                         position: 'absolute',
-                        top: '360.5%',
+                        top: '391.3%',
                         left: '0',
                         right: '0',
-                        height: '1.5px',
+                        height: '1px',
+                        width:"96%",
+                        margin:"auto",
                         //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
-                        backgroundColor: '#B2BEB5',
+                        backgroundColor: '#232023',
                     }}
                 ></div>
                 <div className=' relative flex justify-between sm:mt-35 '>
                     <p className='hidden sm:block'>02</p>
-                    <p >//PROJECT</p>
-                    <p>2004</p>
+                    <p className='font-semibold' >//PROJECT</p>
+                    <p className='text-gray-500'>2004</p>
                 </div>
     
                 <div className=' relative flex flex-col sm:flex sm:flex-row justify-between my-15 sm:items-end'>
@@ -33,7 +35,7 @@ const ProjectHead = () => {
         viewport={{ once: true, amount: 0.6 }} // adjust amount if needed
         className='sm:text-8xl text-2xl text-center sm:tracking-[3px] mx-1'
       >
-         <h1 className='sm:text-9xl text-3xl'>LATEST</h1>
+         <h1 className='sm:text-9xl text-3xl font-semibold'>LATEST</h1>
       </motion.div>
        <motion.div
         initial={{ y: -100, opacity: 0 }}
@@ -42,13 +44,13 @@ const ProjectHead = () => {
         viewport={{ once: true, amount: 0.6 }} // adjust amount if needed
         className='sm:text-8xl text-2xl text-center sm:tracking-[3px] mx-1'
       >
-                          <h1 className='sm:text-9xl text-3xl'>PROJECT</h1>
+                          <h1 className='sm:text-9xl text-3xl font-semibold tracking-tight'>PROJECT</h1>
       </motion.div>
     
                        
     
                     </div>
-                    <div className='text-[15px] sm:text-[25px] sm:my-0 my-1'>
+                    <div className='text-[12px] sm:text-[17px] sm:my-0 my-1'>
                         <p>My creative spirit comes alive in</p>
                         <p>the digital realm.With nimble</p>
                         <p>fingers flying across the device.</p>

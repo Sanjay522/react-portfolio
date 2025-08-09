@@ -41,9 +41,11 @@ const HeroSection: React.FC = () => {
                     top: '15%',
                     left: '0',
                     right: '0',
-                    height: '1.5px',
+                    height: '1px',
+                    width:"96%",
+                    margin:"auto",
                     //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
-                    backgroundColor: '#B2BEB5',
+                    backgroundColor: '#232023',
                 }}
             ></div>
             <div className=''
@@ -52,10 +54,10 @@ const HeroSection: React.FC = () => {
                     top: '0',
                     left: '20%',
                     right: '0',
-                    height: '1393%',
+                    height: '1372%',
                     width: "0.5px",
                     //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
-                    backgroundColor: '#B2BEB5',
+                    backgroundColor: '#232023',
                 }}
             ></div>
             <div className='hidden sm:block'
@@ -64,10 +66,10 @@ const HeroSection: React.FC = () => {
                     top: '0',
                     left: '50%',
                     right: '0',
-                    height: '1393%',
+                    height: '1372%',
                     width: "1px",
                     //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
-                    backgroundColor: '#B2BEB5',
+                    backgroundColor: '#232023',
                 }}
             ></div>
             <div
@@ -76,10 +78,10 @@ const HeroSection: React.FC = () => {
                     top: '0',
                     left: '80%',
                     right: '0',
-                    height: '1393%',
+                    height: '1372%',
                     width: "1px",
                     //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
-                    backgroundColor: '#B2BEB5',
+                    backgroundColor: '#232023',
                 }}
             ></div>
             <div
@@ -88,9 +90,11 @@ const HeroSection: React.FC = () => {
                     top: '75%',
                     left: '0',
                     right: '0',
-                    height: '1.5px',
+                    height: '1px',
+                      width:"96%",
+                    margin:"auto",
                     //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
-                    backgroundColor: '#B2BEB5',
+                    backgroundColor: '#232023',
                 }}
             ></div>
 
@@ -101,9 +105,11 @@ const HeroSection: React.FC = () => {
                     top: '92%',
                     left: '0',
                     right: '0',
-                    height: '1.5px',
+                    height: '1px',
+                      width:"96%",
+                    margin:"auto",
                     //   borderTop: '0.5px solid white', // Use a very thin border (less than 1px) 
-                    backgroundColor: '#B2BEB5',
+                    backgroundColor: '#232023',
                 }}
             ></div>
 
@@ -113,10 +119,10 @@ const HeroSection: React.FC = () => {
             <div className="relative  flex items-center justify-center">
 
                 <motion.h1
-                    initial={{ y: -200, opacity: 0, zIndex: -20 }}
+                    initial={{ y: -100, opacity: 0, zIndex: 20 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    className='  leading-[1.25] tracking-[15px] text-[25vw] sm:tracking-[30px]   sm:leading-[1.15]'
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className='  leading-[1.25]  text-[360px] font-semibold   sm:leading-[1.15]'
                 >
                     SANJAY  </motion.h1>
 
@@ -133,12 +139,12 @@ initial={{y:50,opacity:0}}
 animate={{y:0,opacity:1}}
 transition={{duration:0.6,ease:easeInOut}}
 >
-            <div className=" relative flex flex-col sm:flex sm:flex-row justify-between sm:items-center h-[15vh] px-10">
+            <div className=" text-[15px] relative flex flex-col sm:flex sm:flex-row justify-between sm:items-center h-[15vh] px-10 my-8">
                 {detail.map((item, idx) => (
-                    <div key={idx} className="text-center space-y-1 flex flex-col justify-center items-center sm:py-0 py-7">
-                        {item.image && <img className='h-6 w-6' src={item.image} alt={`icon-${idx}`} />}
-                        <p>{item.data1}</p>
-                        {item.data2 && <p>{item.data2}</p>}
+                    <div key={idx} className={`text-center space-y-1 flex flex-col justify-center items-center sm:py-0 py-7 ${idx == 1 ? "text-center space-y-1 flex flex-col justify-center items-center sm:py-0 py-7 ml-8":"text-center space-y-1 flex flex-col justify-center items-center sm:py-0 py-7"}`}>
+                        {item.image && <img className='h-6 w-6 invert-100' src={item.image} alt={`icon-${idx}`} />}
+                        <p className='font-medium text-[15px]'>{item.data1}</p>
+                        {item.data2 && <p className='text-gray-500 text-[12px]'>{item.data2}</p>}
                     </div>
                 ))}
             </div>
