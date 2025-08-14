@@ -11,13 +11,11 @@ import Experience from './component/Experience';
 import ToolStack from './component/ToolStack';
 import LetsWorkTogether from './component/LetsWorkTogether';
 import Footer from './component/Footer';
-import CustomCursor from './component/Cursor';
 import Testimoniols from './component/Testimoniols';
 
 const Layout: React.FC = () => {
   return (
     <>
-    <CustomCursor/>
       <motion.div className="sm:px-12 px-8">
         <HeroSection />
         <Aproach />

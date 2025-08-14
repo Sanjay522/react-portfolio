@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
             navigate("/menu"); // Go to menu page
           }
         }}
-        className="font-semibold"
+        className="font-semibold ml-25"
       >
         {isMenuPage ? "CANCEL" : "MENU"}
       </button>
